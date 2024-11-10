@@ -1,14 +1,24 @@
 import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { GestureResponderEvent, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Button } from "react-native-paper";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 
 interface product {
   product: ProductData;
 }
 
+type RootStackParamList = {
+    details: { product: ProductData };
+  };
+
 const ProductCard = ({ product }: product) => {
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+    const handleCart = (e: GestureResponderEvent) => {
+        e.stopPropagation();
+        console.log('hi cart');
+    }
   return (
-    <TouchableOpacity style={styles.card}>
+    <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('details', {product})}>
       <Image source={{ uri: product.imageUrl }} style={styles.image} />
       <Text style={styles.name}>{product.name.slice(0, 14) + "..."}</Text>
       <Text style={styles.description}>{product.description.slice(0, 40) + "..."}</Text>
@@ -16,7 +26,7 @@ const ProductCard = ({ product }: product) => {
       <Button
         mode="contained"
         style={styles.butonstyle}
-        onPress={() => console.log("Pressed")}
+        onPress={handleCart}
       >
         Add to cart
       </Button>

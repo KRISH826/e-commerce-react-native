@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   itemContainer: {
     flexDirection: "column",
     alignItems: "center",
-    marginHorizontal: 7
+    marginHorizontal: 8
   },
   itemText: {
     fontSize: 16,

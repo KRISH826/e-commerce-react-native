@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   carouselItem: {
     flex: 1,
     justifyContent: 'center',
-    marginHorizontal: 5,
+    marginHorizontal: 10,
     borderRadius: 5,
   },
   bannerImage: {
