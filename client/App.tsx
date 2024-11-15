@@ -9,11 +9,10 @@ export default function App() {
   return (
     <>
       <GestureHandlerRootView>
-      <NavigationContainer>
+        <NavigationContainer>
           <TabNavigator />
-      </NavigationContainer>
-    </GestureHandlerRootView>
+        </NavigationContainer>
+      </GestureHandlerRootView>
     </>
-    
   );
 }

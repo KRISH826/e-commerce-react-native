@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   bannerImage: {
-    width: width - 10,
+    width: width - 20,
     height: 175,
     borderRadius: 5,
   },

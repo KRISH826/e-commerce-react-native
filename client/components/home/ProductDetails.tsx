@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
   cartButton: {
     backgroundColor: Colors.light.primaryColor,
     borderRadius: 5,
-    color: "white",
     width: "50%",
   },
   buyButton: {

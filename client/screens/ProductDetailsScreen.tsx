@@ -1,4 +1,4 @@
-import { Text, ScrollView } from 'react-native'
+import { ScrollView } from 'react-native'
 import React from 'react'
 import Layout from '@/components/Layout'
 import ProductDetails from '@/components/home/ProductDetails'

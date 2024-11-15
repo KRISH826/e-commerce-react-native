@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, StyleSheet, TextInput } from "react-native";
 import React from "react";
-import { Appbar } from "react-native-paper";
+import { Appbar, useTheme } from "react-native-paper";
 import { Colors } from "@/constants/Color";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
@@ -25,7 +25,6 @@ const Header = () => {
 };
 
 export default Header;
-
 const styles = StyleSheet.create({
     header: {
         paddingHorizontal: 0,
@@ -43,3 +42,4 @@ const styles = StyleSheet.create({
     },
 
 });
+
