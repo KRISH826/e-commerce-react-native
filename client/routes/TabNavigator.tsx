@@ -1,10 +1,8 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeStackNavigator from './HomeStackNavigator';
 import LoginScreen from '@/screens/LoginScreen';
 import { Colors } from '@/constants/Color';
-import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/Ionicons";
 
 
