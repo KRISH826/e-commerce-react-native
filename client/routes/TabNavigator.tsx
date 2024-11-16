@@ -4,6 +4,7 @@ import HomeStackNavigator from './HomeStackNavigator';
 import LoginScreen from '@/screens/LoginScreen';
 import { Colors } from '@/constants/Color';
 import Icon from "react-native-vector-icons/Ionicons";
+import CartScreen from '@/screens/CartScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -31,7 +32,7 @@ const TabNavigator = () => {
           <Tab.Screen name="You" component={LoginScreen} />
           <Tab.Screen
             name="Cart"
-            component={LoginScreen}
+            component={CartScreen}
             options={{
               tabBarBadge: 31,
               tabBarBadgeStyle: {
