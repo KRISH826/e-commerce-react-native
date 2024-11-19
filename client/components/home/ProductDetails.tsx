@@ -43,7 +43,8 @@ export default ProductDetails;
 const styles = StyleSheet.create({
   container: {
     padding: 16,
-    backgroundColor: "#f7f7f7",
+    backgroundColor: "#fff",
+    height: "100%",
   },
   image: {
     width: "100%",

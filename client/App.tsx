@@ -6,6 +6,7 @@ import {
   configureReanimatedLogger,
   ReanimatedLogLevel,
 } from 'react-native-reanimated';
+import { Provider } from "react-native-paper";
 
 const Tab = createBottomTabNavigator();
 
@@ -18,11 +19,13 @@ configureReanimatedLogger({
 export default function App() {
   return (
     <>
+    <Provider>
       <GestureHandlerRootView>
         <NavigationContainer>
           <TabNavigator />
         </NavigationContainer>
       </GestureHandlerRootView>
+    </Provider>
     </>
   );
 }

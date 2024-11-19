@@ -19,7 +19,8 @@ const Header = () => {
       {route.name !== "Home" && (
         <Appbar.BackAction
           onPress={handleBackPress}
-          style={{ padding: 0, margin: 0 }}
+          style={{ padding: 0, margin: 0}}
+          color={Colors.light.primaryColor}
         />
       )}
       <TextInput
