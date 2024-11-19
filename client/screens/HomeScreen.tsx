@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import Category from "@/components/home/Category";
 import HomeBanner from "@/components/home/HomeBanner";
 import Product from "@/components/home/Product";
+import { Dialog, Portal } from 'react-native-paper'
 
 const HomeScreen = () => {
   return (

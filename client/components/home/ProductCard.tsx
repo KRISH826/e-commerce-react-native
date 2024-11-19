@@ -15,7 +15,6 @@ const ProductCard = ({ product }: product) => {
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const handleCart = (e: GestureResponderEvent) => {
         e.stopPropagation();
-        console.log('hi cart');
     }
   return (
     <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('details', {product})}>
