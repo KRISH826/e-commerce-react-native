@@ -6,9 +6,11 @@ import NoData from "../shared/NoData";
 import CartItem from "./CartItem";
 import { Colors } from "@/constants/Color";
 import { Button } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
 
 const CartMain = () => {
   const [cartItem, setcartItem] = useState<ProductData[]>(productsData);
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.cart_section}>
@@ -51,7 +53,7 @@ const CartMain = () => {
         <Button
           mode="contained"
           textColor="white"
-          onPress={() => console.log("Pressed")}
+          onPress={() => navigation.navigate('CheckOut',)}
           style={styles.orderButton}
         >
           Place Order

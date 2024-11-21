@@ -5,8 +5,11 @@ import TabNavigator from "./routes/TabNavigator";
 import {
   configureReanimatedLogger,
   ReanimatedLogLevel,
-} from 'react-native-reanimated';
+} from "react-native-reanimated";
 import { Provider } from "react-native-paper";
+import StackNavigator from "./routes/StackNavigator";
+import { useState } from "react";
+import AuthStackNavigator from "./routes/AuthStackNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,15 +20,26 @@ configureReanimatedLogger({
 });
 
 export default function App() {
+  const [authenticated, setauthenticated] = useState(true);
+  console.log(authenticated);
+
   return (
     <>
-    <Provider>
-      <GestureHandlerRootView>
-        <NavigationContainer>
-          <TabNavigator />
-        </NavigationContainer>
-      </GestureHandlerRootView>
-    </Provider>
+      <Provider>
+        <GestureHandlerRootView>
+          <NavigationContainer>
+            {authenticated ? (
+              <>
+                <AuthStackNavigator setAuthenticated={setauthenticated} />
+              </>
+            ) : (
+              <>
+                <TabNavigator />
+              </>
+            )}
+          </NavigationContainer>
+        </GestureHandlerRootView>
+      </Provider>
     </>
   );
 }

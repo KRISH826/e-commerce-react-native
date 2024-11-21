@@ -9,7 +9,7 @@ interface product {
 
 type RootStackParamList = {
     details: { product: ProductData };
-  };
+};
 
 const ProductCard = ({ product }: product) => {
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
